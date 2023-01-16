@@ -3,12 +3,7 @@ import React, { useState,useRef } from 'react';
 
 function Todo(props)  {
     
-    
-    const [todo, setTodo] = useState({
-      id:props.id,  
-      value:props.value,
-      complete:false,
-    })
+    const todo = props.todo;
     
 
     

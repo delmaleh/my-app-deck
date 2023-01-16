@@ -24,12 +24,6 @@ useEffect(() => {
 }, [todos]);
 
 
-const storeData = (newTodos) => {
-    console.log(todos.length);
-    //todos = newTodos;
-
-    
-}
 
 const handleAdd = (e) => {
     
@@ -57,11 +51,10 @@ const handleUpdate = (m) => {
 const handleEdit = (m) => {
     const name=nameRef.current.value;
     if (name==='') return;
+    const newTodos = todos.map(todo => {
+        return todo.id === uid ? { ...todo, value:name } : todo;
+      });
     
-    const index = todos.findIndex((todo)=> todo.id=== uid );
-    console.log(index);
-    const newTodos= [...todos];
-    newTodos[index]={ id:uuidv4(), value: name };
     setTodos(newTodos);
     
    

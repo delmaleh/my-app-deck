@@ -1,38 +1,37 @@
-
-/*import Component from "react"
-
+import { Component } from "react";
 
 export class Movie extends Component {
     constructor(props) {
     super(props);
     this.state = {
-        title: this.props.title,
-        genre:this.props.genre,
-        number:this.props.number,
-        daily:this.props.daily
+      id:this.props.id,  
+      title: this.props.title,
+      genre:this.props.genre,
+      number:this.props.number,
+      daily:this.props.daily,
+      movie:this.props.movie
     }
     
 }
+handleDelete = () => {}
 
 render () {
-return (
-    <>
-     </>   
-)
-}
-}
-
-*/
-export default function Movie({id,title,genre,number,daily,}) {
-    return (
-        <>
-        <td>{title}</td>
-         <td>{genre}</td>
-         <td>{number}</td>
-         <td>{daily}</td>
+  return(
+  <>
+       
+             
+       <td>{this.state.title}</td>
+         <td>{this.state.genre}</td>
+         <td>{this.state.number}</td>
+         <td>{this.state.daily}</td>
          
-         </>   
-    )
+        
+
+  </>   
+      
+  )
 }
 
-//export default Movie;
+}
+export default Movie;
+    
