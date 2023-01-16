@@ -56,22 +56,7 @@ const handleEdit = (m) => {
       });
     
     setTodos(newTodos);
-    
-   
-    //on supprime
-   /* const newTodos= todos.filter(todo => uid!=todo.id);
-    const new2Todos = [
-        // Items before the insertion point:
-        ...newTodos.slice(0, index),
-        // New item:
-        { id:uuidv4(), value: name },
-        // Items after the insertion point:
-        ...newTodos.slice(index)
-      ];
-      
-      setTodos(todos => new2Todos);  
-    */
-   
+
     nameRef.current.value=null;
     setIsShown(true);     
 }
