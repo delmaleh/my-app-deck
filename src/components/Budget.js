@@ -9,8 +9,8 @@ function Budget() {
 
     const [items, setItems] = useState([])
     const [alert, setAlert] = useState({ show: false });
-    const [isShown,setIsShown] = useState(true);
     const [edit, setEdit] = useState(false);
+    const [sum, setSum] = useState();
     const [uid,setUid] = useState();
     const nameRef = useRef();
     const chargeRef = useRef();
@@ -21,16 +21,23 @@ function Budget() {
         const tabItem = localStorage.getItem(KEY);
         const storedItems = JSON.parse(tabItem);
         if (storedItems) setItems(storedItems);
-      
+        total(storedItems);
       }, []);
       
       useEffect(() => {
         localStorage.setItem(KEY, JSON.stringify(items));
+        total(items);
         
       }, [items]);
       
         
-
+const total = (newItems) => {
+    var total=0;
+    for (let i=0;i<newItems.length;i++) 
+        total += newItems[i].charge;
+    setSum(total);
+    console.log(total);
+}
   // handle alert
  const handleAlert = ({ type, text }) => {
     setAlert({ show: true, type, text });
@@ -144,9 +151,7 @@ return(
         total :
         <span className="total">
           $
-          {items.reduce((acc, curr) => {
-            return (acc += curr.charge);
-          }, 0)}
+          {sum}
         </span>
       </h1>
     </div>
