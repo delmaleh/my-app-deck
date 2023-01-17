@@ -1,4 +1,5 @@
 
+import "./Todos.css";
 import Todo from "./Todo";
 import { v4 as uuidv4 } from 'uuid';
 import React, { useState,useRef,useEffect } from 'react';
@@ -70,7 +71,7 @@ const handleEdit = (m) => {
     <input type="text" ref={nameRef} ></input><input type="button" value="add" onClick={handleAdd} style={{display: isShown ? 'block' : 'none'}}/>
     <input type="button" id="update" value="update" onClick={handleEdit} style={{display: isShown ? 'none' : 'block'}} />     
     
-    <div>{todos.length} to do left</div>    
+    <div>{todos.length} to dos left</div>    
 
   </>   
       

@@ -7,13 +7,13 @@ import Movies from './components/Movies';
 import Counters from './components/Counters'; 
 import Todos from './components/Todos'; 
 import Budget from './components/Budget';
-
+import Twits from './components/Twits';
 import reportWebVitals from './reportWebVitals'; 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Budget/>
+    <Twits/>
   </React.StrictMode>,
   document.getElementById('root')
 );

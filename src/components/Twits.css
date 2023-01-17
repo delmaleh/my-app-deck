@@ -1,0 +1,39 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.twit {
+    background: aqua;
+    border: 2px solid black;
+    padding: 8px;
+    width: fit-content;
+    min-width: 320px;
+    position: relative;
+}
+.delete {
+    position: absolute;
+    right: 0;
+    border: none;
+    background-color: aqua;
+    top:0;
+    font-size: 30;
+}
+.twit h3,p {
+    margin: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.twit-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap:16px;
+}
+
+.twit-form {
+    display: flex;
+    flex-direction: column;
+    width:fit-content;
+    gap:8px;
+    margin-bottom: 32px;
+}

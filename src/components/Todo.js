@@ -1,14 +1,13 @@
 import { Component } from "react";
 import React, { useState,useRef } from 'react';
+import { MdEdit, MdDelete } from "react-icons/md";
+
 
 function Todo(props)  {
     
     const todo = props.todo;
     
-
-    
     const handleDelete = () => {
-        //setIsSubscribed(event.target.checked);
         props.handleDelete(todo);
        
       }
@@ -18,7 +17,16 @@ function Todo(props)  {
       }
   return(
   
-       <div><input type="button" value="x"  onClick={handleDelete}/><input type="button" value="u"  onClick={handleUpdate}/>{todo.value}</div>
+      <div>
+        <button className="clear-btn" onClick={handleDelete}>
+          <MdDelete />
+        </button>
+        
+        <button className="edit-btn" onClick={handleUpdate}>
+          <MdEdit />
+        </button>
+        {todo.value}
+      </div>
      
       
   )

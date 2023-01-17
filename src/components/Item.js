@@ -42,7 +42,7 @@ function Item(props)  {
       </button>
     </div>
   </li> 
-       /*<div><input type="button" value="x"  onClick={handleDelete}/><input type="button" value="u"  onClick={handleUpdate}/>{item.name}</div>*/
+       
      
       
   )
