@@ -12,7 +12,7 @@ function TwitList(props) {
     return (
         <div className="twit-container">{twits.map((twit)=> (
         
-            <Twit id={twit.id} twit={twit} handleDelete={handleDelete} ></Twit>
+            <Twit key={twit.id} id={twit.id} twit={twit} handleDelete={handleDelete} ></Twit>
         ))
         }</div>
     )
